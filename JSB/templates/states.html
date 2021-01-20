@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>State Growth</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div type="button" class="btn btn-dark"> <a href="http://127.0.0.1:5000/">Back</a></div>
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>Fastest Growing Cities in America by State</h1>
+                <p>Use the dropdowns below to see the growth of major states and cities in America</p>
+                <div class="state">
+                    <h4>State: <select id="stateSelection" onchange="stateChangedState(this.value)"></select></h5>
+                    
+                  </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-2">
+                <div class="startYear">
+                  <h5>Starting Year Selection</h5>
+                  <select id="startingYear" onchange="startChangedState(this.value)"></select>
+                </div>
+                <div class="endYear">
+                  <h5>Ending Year Selection</h5>
+                  <select id="endingYear" onchange="endChangedState(this.value)"></select>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div id="map"></div>
+            </div>
+            
+        </div>
+</body>
+</html>

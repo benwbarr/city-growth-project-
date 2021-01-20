@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+            <h1>Fastest Growing Cities in America</h1>
+            <p>Use the dropdowns below to see the growth of major states and cities in America</p>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-md-2">
+            <div class="startYear">
+              <h5>Starting Year Selection</h5>
+              <select id="startingYear" onchange="startChangedHome(this.value)"></select>
+            </div>
+            <div class="endYear">
+              <h5>Ending Year Selection</h5>
+              <select id="endingYear" onchange="endChangedHome(this.value)"></select>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div id="map"></div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class ="col-md-6" style="border-color:black">
+            <h3>Our Data Shows</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, dui ac pharetra malesuada, risus erat molestie ex, vel vestibulum est mi a mi. Sed et mollis augue, eget lacinia quam. Vestibulum ullamcorper orci sit amet ullamcorper malesuada. Aliquam faucibus felis ante, in tempor felis lobortis vitae. Nullam quis tortor sed nulla viverra sollicitudin. Aenean ac vestibulum nibh. Nam sed nisl metus.</p> 
+            <br>    
+            <p> Aliquam erat volutpat. Quisque semper, orci id tempor mollis, metus dolor convallis risus, in pretium risus dui ac nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse fermentum varius quam, sed porta massa ultricies vitae. Donec ut eros non libero interdum feugiat ut non massa. Sed ac sapien ut ligula congue lacinia. Phasellus tempor massa sapien, ut auctor mi elementum sit amet. Nullam eget tempor lorem.</p>
+            <a href = "http://127.0.0.1:5000/byState">Click Here</a>
+          </div>
+        <div class = "col-md-6">
+            <div id="bar"></div>
+        </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="../static/app.js"></script>
+</body>
