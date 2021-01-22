@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT JSB.app:app
+web: waitress-serve --port=$PORT app:app
