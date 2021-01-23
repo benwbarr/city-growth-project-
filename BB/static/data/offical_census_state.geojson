@@ -1,0 +1,668 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.79113,32.806671 ]
+    },
+    "properties": {
+    "id":1,
+    "state":".Alabama",
+    "census":4779736,
+    "estimates_base":4780118
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -152.404419,61.370716 ]
+    },
+    "properties": {
+    "id":2,
+    "state":".Alaska",
+    "census":710231,
+    "estimates_base":710246
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.431221,33.729759 ]
+    },
+    "properties": {
+    "id":3,
+    "state":".Arizona",
+    "census":6392017,
+    "estimates_base":6392292
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.373123,34.969704 ]
+    },
+    "properties": {
+    "id":4,
+    "state":".Arkansas",
+    "census":2915918,
+    "estimates_base":2916029
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.681564,36.116203 ]
+    },
+    "properties": {
+    "id":5,
+    "state":".California",
+    "census":37253956,
+    "estimates_base":37254522
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.311104,39.059811 ]
+    },
+    "properties": {
+    "id":6,
+    "state":".Colorado",
+    "census":5029196,
+    "estimates_base":5029319
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.755371,41.597782 ]
+    },
+    "properties": {
+    "id":7,
+    "state":".Connecticut",
+    "census":3574097,
+    "estimates_base":3574151
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.507141,39.318523 ]
+    },
+    "properties": {
+    "id":8,
+    "state":".Delaware",
+    "census":897934,
+    "estimates_base":897947
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.026817,38.897438 ]
+    },
+    "properties": {
+    "id":9,
+    "state":".District of Columbia",
+    "census":601723,
+    "estimates_base":601767
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.686783,27.766279 ]
+    },
+    "properties": {
+    "id":10,
+    "state":".Florida",
+    "census":18801310,
+    "estimates_base":18804589
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.643074,33.040619 ]
+    },
+    "properties": {
+    "id":11,
+    "state":".Georgia",
+    "census":9687653,
+    "estimates_base":9688737
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -157.498337,21.094318 ]
+    },
+    "properties": {
+    "id":12,
+    "state":".Hawaii",
+    "census":1360301,
+    "estimates_base":1360304
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.478828,44.240459 ]
+    },
+    "properties": {
+    "id":13,
+    "state":".Idaho",
+    "census":1567582,
+    "estimates_base":1567658
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.986137,40.349457 ]
+    },
+    "properties": {
+    "id":14,
+    "state":".Illinois",
+    "census":12830632,
+    "estimates_base":12831572
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.258278,39.849426 ]
+    },
+    "properties": {
+    "id":15,
+    "state":".Indiana",
+    "census":6483802,
+    "estimates_base":6484050
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.210526,42.011539 ]
+    },
+    "properties": {
+    "id":16,
+    "state":".Iowa",
+    "census":3046355,
+    "estimates_base":3046877
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.726486,38.5266 ]
+    },
+    "properties": {
+    "id":17,
+    "state":".Kansas",
+    "census":2853118,
+    "estimates_base":2853120
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.670067,37.66814 ]
+    },
+    "properties": {
+    "id":18,
+    "state":".Kentucky",
+    "census":4339367,
+    "estimates_base":4339330
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.867805,31.169546 ]
+    },
+    "properties": {
+    "id":19,
+    "state":".Louisiana",
+    "census":4533372,
+    "estimates_base":4533500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -69.381927,44.693947 ]
+    },
+    "properties": {
+    "id":20,
+    "state":".Maine",
+    "census":1328361,
+    "estimates_base":1328354
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.802101,39.063946 ]
+    },
+    "properties": {
+    "id":21,
+    "state":".Maryland",
+    "census":5773552,
+    "estimates_base":5773787
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.530106,42.230171 ]
+    },
+    "properties": {
+    "id":22,
+    "state":".Massachusetts",
+    "census":6547629,
+    "estimates_base":6547788
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.536095,43.326618 ]
+    },
+    "properties": {
+    "id":23,
+    "state":".Michigan",
+    "census":9883640,
+    "estimates_base":9884112
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.900192,45.694454 ]
+    },
+    "properties": {
+    "id":24,
+    "state":".Minnesota",
+    "census":5303925,
+    "estimates_base":5303933
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.678696,32.741646 ]
+    },
+    "properties": {
+    "id":25,
+    "state":".Mississippi",
+    "census":2967297,
+    "estimates_base":2968129
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.288368,38.456085 ]
+    },
+    "properties": {
+    "id":26,
+    "state":".Missouri",
+    "census":5988927,
+    "estimates_base":5988941
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.454353,46.921925 ]
+    },
+    "properties": {
+    "id":27,
+    "state":".Montana",
+    "census":989415,
+    "estimates_base":989400
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.268082,41.12537 ]
+    },
+    "properties": {
+    "id":28,
+    "state":".Nebraska",
+    "census":1826341,
+    "estimates_base":1826311
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.055374,38.313515 ]
+    },
+    "properties": {
+    "id":29,
+    "state":".Nevada",
+    "census":2700551,
+    "estimates_base":2700683
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.563896,43.452492 ]
+    },
+    "properties": {
+    "id":30,
+    "state":".New Hampshire",
+    "census":1316470,
+    "estimates_base":1316457
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.521011,40.298904 ]
+    },
+    "properties": {
+    "id":31,
+    "state":".New Jersey",
+    "census":8791894,
+    "estimates_base":8791959
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.248482,34.840515 ]
+    },
+    "properties": {
+    "id":32,
+    "state":".New Mexico",
+    "census":2059179,
+    "estimates_base":2059199
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.948051,42.165726 ]
+    },
+    "properties": {
+    "id":33,
+    "state":".New York",
+    "census":19378102,
+    "estimates_base":19378117
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.806419,35.630066 ]
+    },
+    "properties": {
+    "id":34,
+    "state":".North Carolina",
+    "census":9535483,
+    "estimates_base":9535762
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.784012,47.528912 ]
+    },
+    "properties": {
+    "id":35,
+    "state":".North Dakota",
+    "census":672591,
+    "estimates_base":672575
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.764915,40.388783 ]
+    },
+    "properties": {
+    "id":36,
+    "state":".Ohio",
+    "census":11536504,
+    "estimates_base":11536763
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.928917,35.565342 ]
+    },
+    "properties": {
+    "id":37,
+    "state":".Oklahoma",
+    "census":3751351,
+    "estimates_base":3751582
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.070938,44.572021 ]
+    },
+    "properties": {
+    "id":38,
+    "state":".Oregon",
+    "census":3831074,
+    "estimates_base":3831083
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.209755,40.590752 ]
+    },
+    "properties": {
+    "id":39,
+    "state":".Pennsylvania",
+    "census":12702379,
+    "estimates_base":12702891
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.51178,41.680893 ]
+    },
+    "properties": {
+    "id":40,
+    "state":".Rhode Island",
+    "census":1052567,
+    "estimates_base":1052970
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.945007,33.856892 ]
+    },
+    "properties": {
+    "id":41,
+    "state":".South Carolina",
+    "census":4625364,
+    "estimates_base":4625358
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.438828,44.299782 ]
+    },
+    "properties": {
+    "id":42,
+    "state":".South Dakota",
+    "census":814180,
+    "estimates_base":814198
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.692345,35.747845 ]
+    },
+    "properties": {
+    "id":43,
+    "state":".Tennessee",
+    "census":6346105,
+    "estimates_base":6346281
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.563461,31.054487 ]
+    },
+    "properties": {
+    "id":44,
+    "state":".Texas",
+    "census":25145561,
+    "estimates_base":25146072
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.862434,40.150032 ]
+    },
+    "properties": {
+    "id":45,
+    "state":".Utah",
+    "census":2763885,
+    "estimates_base":2763891
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.710686,44.045876 ]
+    },
+    "properties": {
+    "id":46,
+    "state":".Vermont",
+    "census":625741,
+    "estimates_base":625727
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.169968,37.769337 ]
+    },
+    "properties": {
+    "id":47,
+    "state":".Virginia",
+    "census":8001024,
+    "estimates_base":8001046
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.490494,47.400902 ]
+    },
+    "properties": {
+    "id":48,
+    "state":".Washington",
+    "census":6724540,
+    "estimates_base":6724540
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.954453,38.491226 ]
+    },
+    "properties": {
+    "id":49,
+    "state":".West Virginia",
+    "census":1852994,
+    "estimates_base":1853008
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.616508,44.268543 ]
+    },
+    "properties": {
+    "id":50,
+    "state":".Wisconsin",
+    "census":5686986,
+    "estimates_base":5687285
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.30249,42.755966 ]
+    },
+    "properties": {
+    "id":51,
+    "state":".Wyoming",
+    "census":563626,
+    "estimates_base":563775
+    }
+  }
+]
+}
