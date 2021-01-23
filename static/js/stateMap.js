@@ -1,6 +1,6 @@
-d3.csv("../AY/SQL/yearly_estimates_state.csv", function(data) {
+d3.csv("../../static/data/yearly_estimates_state.csv", function(data) {
     // data => names, metadata, samples //
-    console.log(data)
+    console.log(data.state)
     // names : list of id numbers //
     //console.log(data.names)
     // metadata => id, ethnicity, gender, age, location //
