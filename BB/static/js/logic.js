@@ -77,53 +77,48 @@ legend.onAdd = function() {
 };
 legend.addTo(map);
 
-function createMarkers(response) {
 
+function handleSubmit() {
+    // Prevent the page from refreshing
+    d3.event.preventDefault();
 
-    var locations = response.data.locations;
+    // Select the input value from the form
+    var y1 = "y" + d3.select("#startingYear").node().value;
 
-    // Initialize an array to hold markers
-    var popMarkers = [];
+    var y2 = "y" + d3.select("#endingYear").node().value;
+    console.log(y1);
 
-    // Loop through the array
-    for (var index = 0; index < locations.length; index++) {
-        var location = locations[index];
+    // clear the input value
+    d3.select("#startingYear").node().value = "";
 
-        // For each location, create a marker and bind a popup with the location's name
-        var popMarker = L.circleMarker([location.Latitude, location.Longitude],{
-                stroke: false,
-                fillOpacity: 0.75,
-                color: "purple",
-                fillColor: "purple",
-        })
-            .bindPopup("<h3>" + location.state + "<h3><h3>Population: " + location.census + "</h3>");
-        popMarkers.push(popMarker)
-
-        getColor(popMarker);
-        function getColor(popMarker) {
-            switch (true) {
-                case popMarker > 40000000:
-                    return "#f06465";
-                case popMarker > 32000000:
-                    return '#f0936b';
-                case popMarker > 24000000:
-                    return '#f3ba4e';
-                case popMarker > 1600000:
-                    return '#f3db4c';
-                case popMarker > 8000000:
-                    return '#c7f34d';
-                default:
-                    return '#74f34d';
-
-            }
-            radius = getColor.census;
-        }
-    }
-
-    // Create a layer group made from the markers array, pass it into the createMap function
-    createMap(L.layerGroup(popMarkers));
-
+    // Build the plot with the new stock
+    buildPlot(y1, y2);
 }
 
-// Perform an call Call createMarkers when complete
-    d3.json("static/data/offical_census_state.json", createMarkers);
+function buildPlot(y1, y2) {
+
+
+    d3.json("static/data/yearly_estimates_state.json", function(data) {
+        console.log(data.data.locations)
+
+        for (var index = 0; index < data.data.locations.length; index++) {
+            var location = data.data.locations[index];
+            var dif = (location[y2] - location[y1]) / 1000
+
+            markers = L.circleMarker([location.Latitude, location.Longitude], {
+                color: "#F00",
+                radius: dif
+            });
+
+            var from = markers.getLatLng();
+
+            markers.bindPopup(location.state + ' ' + (from).toString());
+
+
+            map.addLayer(markers);
+
+
+        }
+    })
+}
+d3.select("#submit").on("click", handleSubmit);
