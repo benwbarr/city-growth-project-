@@ -55,13 +55,13 @@ function createMap(popMarkers) {
 // legend
 var legend = L.control({ position: "bottomleft" });
 legend.onAdd = function() {
-    var div = L.DomUtil.create("div", "Legend ");
-    var limits = [40000000,32000000,24000000,1600000,8000000,0];
-    var colors = ["#f06465", "#f0936b", "#f3ba4e", "#f3db4c", "#c7f34c",'#74f34d'];
+    var div = L.DomUtil.create("div", "Population Legend");
+    var limits = [1000000,500000,250000,90000,40000,0, "Less Than 0"];
+    var colors = ["#f06465", "#f0936b", "#f3ba4e", "#f3db4c", "#c7f34c",'#74f34d','#4cb4f3'];
     var labels = [];
 
 
-    var legendInfo = "<h1>Legend</h1>" +
+    var legendInfo = "<h3>Population Legend</h3>" +
         "<div class=\"labels\">" + "</div>";
 
     div.innerHTML = legendInfo;
@@ -77,53 +77,87 @@ legend.onAdd = function() {
 };
 legend.addTo(map);
 
-function createMarkers(response) {
+
+function handleSubmit() {
+    // Prevent the page from refreshing
+    //d3.event.preventDefault();
+
+    // Select the input value from the form
+    var y1 = "y" + d3.select("#startingYear").node().value;
+
+    var y2 = "y" + d3.select("#endingYear").node().value;
+   // console.log(y1);
 
 
-    var locations = response.data.locations;
-
-    // Initialize an array to hold markers
-    var popMarkers = [];
-
-    // Loop through the array
-    for (var index = 0; index < locations.length; index++) {
-        var location = locations[index];
-
-        // For each location, create a marker and bind a popup with the location's name
-        var popMarker = L.circleMarker([location.Latitude, location.Longitude],{
-                stroke: false,
-                fillOpacity: 0.75,
-                color: "purple",
-                fillColor: "purple",
-        })
-            .bindPopup("<h3>" + location.state + "<h3><h3>Population: " + location.census + "</h3>");
-        popMarkers.push(popMarker)
-
-        getColor(popMarker);
-        function getColor(popMarker) {
-            switch (true) {
-                case popMarker > 40000000:
-                    return "#f06465";
-                case popMarker > 32000000:
-                    return '#f0936b';
-                case popMarker > 24000000:
-                    return '#f3ba4e';
-                case popMarker > 1600000:
-                    return '#f3db4c';
-                case popMarker > 8000000:
-                    return '#c7f34d';
-                default:
-                    return '#74f34d';
-
-            }
-            radius = getColor.census;
-        }
-    }
-
-    // Create a layer group made from the markers array, pass it into the createMap function
-    createMap(L.layerGroup(popMarkers));
-
+    // Build the plot
+    buildPlot(y1, y2);
 }
 
-// Perform an call Call createMarkers when complete
-    d3.json("static/data/offical_census_state.json", createMarkers);
+
+function buildPlot(y1, y2) {
+
+
+    d3.json("static/data/yearly_estimates_state.json", function(data) {
+        //console.log(data.data.locations)
+
+
+        for (var index = 0; index < data.data.locations.length; index++) {
+            var location = data.data.locations[index];
+            var dif = (location[y2] - location[y1]) - 1000000;
+            var diff = (location[y2] - location[y1]);
+
+            var scale = d3.scaleBand()
+                .domain(diff)
+                .range([0, 1000]);
+
+            var color = "";
+            if (diff > 1000000) {
+                color = '#f06465';
+            }
+            else if (diff > 500000) {
+                color = '#f0936b';
+            }
+            else if (diff > 250000) {
+                color = '#f3ba4e';
+            }
+            else if (diff > 90000) {
+                color = '#f3db4c';
+            }
+            else if (diff > 40000) {
+                color = '#c7f34c';
+            }
+            else if (diff < 0) {
+                color = '#4cb4f3';
+            }
+            else {
+                color = '#74f34d';
+            }
+
+
+
+            markers = L.circleMarker([location.Latitude, location.Longitude], {
+                color: "white",
+                radius: 13,
+                fillOpacity: 1,
+                fillColor: color
+            });
+            var year1 = d3.select("#startingYear").node().value;
+
+            var year2 = d3.select("#endingYear").node().value;
+
+            markers.bindPopup('<h4><p>Location:'
+                + " " + location.state + "</p>"
+                + "<p>Year: " + year1 + " - " + "Year: " + year2 + "</p>"
+                + "Population Difference: "
+                + diff);
+
+
+            map.addLayer(markers);
+           // markers.addTo(map)
+
+        }
+    })
+}
+
+
+d3.select("#submit").on("click", handleSubmit);
