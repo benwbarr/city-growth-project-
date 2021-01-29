@@ -1,22 +1,22 @@
 
 // Define options for states
-d3.json("/get_data").then(function(data) {
+d3.json("/byStateData").then(function(data) {
     // data => names, metadata, samples //
     
-    var locations = data.data.locations
-    console.log(locations[0])
-    var states =[]
-    for (i=0; i<locations.length; i++) {
-        states.push(locations[i].state.split(".").pop())
-    }
-    console.log(states)
+    
+    console.log(data)
+    //var states =[]
+    //for (i=0; i<locations.length; i++) {
+        //states.push(locations[i].state.split(".").pop())
+    //}
+    //console.log(states)
     // inserting id options into dropdown menu
     var dropdown = d3.select("#stateSelection")
-    dropdown.selectAll("option")
-        .data(states)
-        .enter()
-        .append("option")
-        .text(entry => {return entry})
+    //dropdown.selectAll("option")
+        //.data(states)
+        //.enter()
+        //.append("option")
+        //.text(entry => {return entry})
 
     })
 // function for change of state
