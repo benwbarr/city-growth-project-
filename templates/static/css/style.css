@@ -1,0 +1,17 @@
+html,
+body,
+#map-id {
+  height: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+#svg-area {
+  height: 50%;
+  padding: 0;
+  margin: 0;
+}
+jumbotron{
+  background-color:#8A2BE2;
+  text-align:center;
+}
