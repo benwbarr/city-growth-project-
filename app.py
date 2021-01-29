@@ -5,7 +5,7 @@ from flask import (
     request,
     jsonify)
 import pymongo
-from test import (dataCounty, dataState)
+from test import (data2010, data2019, dataState)
 
 #################################################
 # Flask Setup
@@ -33,10 +33,15 @@ def stateData():
 
     return jsonify(dataState)
 
-@app.route("/byCountyData")
+@app.route("/byCountyData2010")
 # County Database Needs CountyName, StateName, Lat, Lon, GDP-County-2010, GDP-County-2020
-def countyData():
-    return jsonify(dataCounty)
+def countyData2010():
+    return jsonify(data2010)
+
+@app.route("/byCountyData2019")
+# County Database Needs CountyName, StateName, Lat, Lon, GDP-County-2010, GDP-County-2020
+def countyData2019():
+    return jsonify(data2019)
 
 
 if __name__ == "__main__":
