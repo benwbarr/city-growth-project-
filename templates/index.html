@@ -1,48 +1,114 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block body %}
-  <div class="container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fastest Growning Cities in America</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin="" />
+    <style>
+        body {
+            background-color: #e8f4f8;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
     <div class="row">
-        <div class="col-md-12 jumbotron text-center">
+        <div class="col-md-12 jumbotron text-center" style="background-color:#72bcd4">
             <h1>Fastest Growing Cities in America</h1>
             <p>Use the dropdowns below to see the growth of major states and cities in America</p>
         </div>
-    </div> 
+    </div>
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 jumbotron" style="background-color:#add8e6">
             <div class="startYear">
-              <h5>Starting Year Selection</h5>
-              <select id="startingYear" onchange="startChangedHome(this.value)"></select>
+                <h5>Starting Year Selection</h5>
+                <select id="startingYear">72bcd4
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
             </div>
             <div class="endYear">
-              <h5>Ending Year Selection</h5>
-              <select id="endingYear" onchange="endChangedHome(this.value)"></select>
+                <h5>Ending Year Selection</h5>
+                <select id="endingYear">
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
+                <button id="submit" type="submit" class="btn btn-default">Submit </button>
             </div>
         </div>
-        <div class="col-md-10">
-            <div id="map"></div>
-        </div>
-        
-    </div>
-    <div class="row">
-        <div class ="col-md-6" style="border-color:black">
-            <h3>Our Data Shows</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc finibus, dui ac pharetra malesuada, risus erat molestie ex, vel vestibulum est mi a mi. Sed et mollis augue, eget lacinia quam. Vestibulum ullamcorper orci sit amet ullamcorper malesuada. Aliquam faucibus felis ante, in tempor felis lobortis vitae. Nullam quis tortor sed nulla viverra sollicitudin. Aenean ac vestibulum nibh. Nam sed nisl metus.</p> 
-            <br>    
-            <p> Aliquam erat volutpat. Quisque semper, orci id tempor mollis, metus dolor convallis risus, in pretium risus dui ac nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse fermentum varius quam, sed porta massa ultricies vitae. Donec ut eros non libero interdum feugiat ut non massa. Sed ac sapien ut ligula congue lacinia. Phasellus tempor massa sapien, ut auctor mi elementum sit amet. Nullam eget tempor lorem.</p>
-            <a href = "/byState">Click Here</a>
-          </div>
-        <div class = "col-md-6">
-            <div id="bar"></div>
-        </div>
-    </div>
-  </div>
-  {% endblock %}
 
-  {% block scripts %}
-  {{ super() }}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="../static/app.js"></script> 
-  {% endblock %}
+        <div class="col-md-10">
+            <div id="map-id"></div>
+        </div>
+
+    </div>
+
+    <br>
+    <div class="row">
+        <div class ="col-md-10"style="background-color:#add8e6">
+            <h3>Our Data Shows</h3>
+            <h4> There is a direct correlation between population growth and gross domestic product growth.</h4>
+            <br>
+
+            <a href = "http://127.0.0.1:5000/byState">Click Here</a>
+        </div>
+    </div>
+    <br>
+    <div class = "col-md-10">
+        <div>  <img src="static/data/split_bar.png" width="1000px" height="1000px"></div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class ="col-md-10 jumbotron" style="background-color:#3a9fbf">
+        <h2>Data Sources</h2>
+        <h3> https://www.census.gov/.</h3>
+        <h3> https://www.bea.gov/.</h3>
+    </div>
+</div>
+
+<!-- D3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+
+<!-- API Key -->
+<script type="text/javascript" src="static/js/config.js"></script>
+<!-- Our JavaScript -->
+<script type="text/javascript" src="static/js/logic.js"></script>
+<script src="static/js/app.js"></script>
+<script src="static/css/style.css"></script>
+
 </body>
+
+</html>
