@@ -103,7 +103,7 @@ function buildPlot(y1, y2) {
 
         for (var index = 0; index < data.data.locations.length; index++) {
             var location = data.data.locations[index];
-            var dif = (location[y2] - location[y1]) - 1000000;
+            //var dif = (location[y2] - location[y1]) - 1000000;
             var diff = (location[y2] - location[y1]);
 
             var scale = d3.scaleBand()
