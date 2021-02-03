@@ -159,5 +159,5 @@ function buildPlot(y1, y2) {
     })
 }
 
-
+handleSubmit(2010)
 d3.select("#submit").on("click", handleSubmit);

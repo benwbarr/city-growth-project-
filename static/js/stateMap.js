@@ -46,6 +46,7 @@ d3.json("/byCountyData2019").then(function(countyData2019){
         }
     }
 })
+
 d3.json("/byStateData").then(function(stateData){
     for (i=0; i<stateData.length; i++){
         if (stateData.state == selectedState) {
@@ -54,9 +55,10 @@ d3.json("/byStateData").then(function(stateData){
         }
     }
 })
-createMap
+
+createMap(countyNames)
 }
-function createMap(county, stateLat, stateLon) {
+function createMap(countyName, county2010, county2019, stateLat, stateLon) {
     var myMap = L.map("map", {
         center: [stateLat, stateLon],
         zoom: 7
